@@ -1,0 +1,18 @@
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+
+#list {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+#student_card {
+    display: flex;
+    flex-direction: column;
+    border: 1px black solid;
+    padding: 10px;
+}
