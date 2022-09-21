@@ -1,13 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+
+body {
+    font-family: 'IM Fell English SC', serif;
+}
+
 h1 {
     font-size: 2em;
     text-align: center;
 }
 
+blockquote {
+    font-size: 1.5em;
+}
 
 #list {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #student_card {
@@ -15,4 +26,14 @@ h1 {
     flex-direction: column;
     border: 1px black solid;
     padding: 10px;
+}
+
+figure {
+    border: 1px black solid;
+}
+
+#navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
 }

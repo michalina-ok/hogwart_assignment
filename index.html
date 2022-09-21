@@ -5,40 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="flashlight.css">-->
+  <!--<link rel="stylesheet" href="flashlight.css">-->
     <link rel="stylesheet" href="style.css" /> 
   </head>
   <body>
-    <section id="landing_page">
+
+   
+    <header>
       <h1>Hacked Hogwarts assignment</h1>
        
         <figure>
-          <figcaption><cite>Dumbledore:</cite></figcaption>
+          
           <blockquote>
             Happiness can be found, even in the darkest of times, if one only
             remembers to turn on the light.
           </blockquote>
+          <figcaption><cite>Dumbledore</cite></figcaption>
         </figure>
         
+      </header>
+
+    <section id="navigation">
+        <form id="filter_form">
+          <label for="filter">Filter by:</label>
+          <select id="filter_options">
+            <option value="expelled">Expelled students</option>
+            <option value="non_expelled">Non expelled students</option>
+            <option value="Gryffindor">Gryffindor</option>
+            <option value="Slytherin">Slytherin</option>
+            <option value="Hufflepuff">Hufflepuff</option>
+            <option value="Ravenclaw">Ravenclaw</option>
+          </select>
+        </form>
+     
+        <form id="sort_form">
+          <label for="sort">Sort by:</label>
+          <select id="sort_options">
+            <option value="first_name_asc">First name ↑</option>
+            <option value="first_name_desc">First name ↓</option>
+            <option value="last_name_asc">Last name ↑</option>
+            <option value="last_name_desc">Last name ↓</option>
+          </select>
+        </form>
     </section>
+
+
     <div id="list">
       
-      <template id="student">
-        <div id="student_card">
-        <p id="first_name"></p>
-        <p id="middle_name"></p>
-        <p id="last_name"></p>
-        <p id="nickname"></p>
-        <p id="gender"></p>
-        <p id="house"></p>
-        <img id="image" src="">
-        
-      </div>
-      </template>
+      
     
     </div>
+    <template id="student">
+      <div id="student_card">
+      <p id="first_name"></p>
+      <p id="middle_name"></p>
+      <p id="last_name"></p>
+      <p id="nickname"></p>
+      <p id="gender"></p>
+      <p id="house"></p>
+      <img id="image" src="">
+      
+    </div>
+    </template>
 
     <script src="script.js"></script>
-    <!-- <script src="flashlight.js"></script> -->
+    <!--<script src="flashlight.js"></script>-->
   </body>
 </html>
