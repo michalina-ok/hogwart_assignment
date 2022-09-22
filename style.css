@@ -5,7 +5,7 @@ body {
     font-family: 'IM Fell English SC', serif;
 }
 
-h1 {
+h1, h2 {
     font-size: 2em;
     text-align: center;
 }
@@ -26,14 +26,47 @@ blockquote {
     flex-direction: column;
     border: 1px black solid;
     padding: 10px;
+    margin-top: 10px;
+}
+
+
+img {
+width: 50%;
+margin: 10px auto;
 }
 
 figure {
     border: 1px black solid;
 }
 
-#navigation {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
-}
+
+[data-action] {
+    cursor: pointer;
+  }
+  
+  #sorting th.sortby {
+    text-decoration: underline;
+  }
+  
+  #sorting th.sortby[data-sort-direction="asc"]::after {
+    content: "⇓";
+  }
+  
+  #sorting th.sortby[data-sort-direction="desc"]::after {
+    content: "⇑";
+  }
+
+  #list {
+    border-collapse: collapse;
+  }
+  #list tbody tr td {
+    padding: 4px;
+    
+  }
+
+  #data {
+    border: 1px black solid;
+    padding: 10px;
+    margin: 10px;
+  }
+  

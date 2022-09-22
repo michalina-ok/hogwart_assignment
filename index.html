@@ -13,7 +13,9 @@
    
     <header>
       <h1>Hacked Hogwarts assignment</h1>
+      <h2>class of 1991</h2>
        
+
         <figure>
           
           <blockquote>
@@ -22,48 +24,87 @@
           </blockquote>
           <figcaption><cite>Dumbledore</cite></figcaption>
         </figure>
+        <section id="data">
+          <p id="students_total"></p>
+          <p id="students_non_expelled"></p>
+          <p id="students_expelled"></p>
+          <p id="currently_displayed"></p>
+          
+    
+        </section>
         
       </header>
 
-    <section id="navigation">
-        <form id="filter_form">
-          <label for="filter">Filter by:</label>
-          <select id="filter_options">
-            <option value="expelled">Expelled students</option>
-            <option value="non_expelled">Non expelled students</option>
-            <option value="Gryffindor">Gryffindor</option>
-            <option value="Slytherin">Slytherin</option>
-            <option value="Hufflepuff">Hufflepuff</option>
-            <option value="Ravenclaw">Ravenclaw</option>
-          </select>
-        </form>
+    
+     <div> <label for="search">Search the site:</label>
+<input type="search" id="search" name="q" value="">
+
+<button id="search_button">Search</button>
+</div>
+<div>
+      <p>
+        Filter:
+        <button class="filter" data-action="filter" data-filter="gryffindor">Gryffindor</button>
+        <button class="filter" data-action="filter" data-filter="ravenclaw">Ravenclaw</button>
+        <button class="filter" data-action="filter" data-filter="hufflepuff">Hufflepuff</button>
+        <button class="filter" data-action="filter" data-filter="slytherin">Slytherin</button>
+        <button class="filter" data-action="filter" data-filter="expelled">Expelled students</button>
+        <button class="filter" data-action="filter" data-filter="non_expelled">Non expelled students</button>
+        <button class="filter" data-action="filter" data-filter="*">all</button>
+      </p>
+    </div>
+  
      
-        <form id="sort_form">
-          <label for="sort">Sort by:</label>
-          <select id="sort_options">
-            <option value="first_name_asc">First name ↑</option>
-            <option value="first_name_desc">First name ↓</option>
-            <option value="last_name_asc">Last name ↑</option>
-            <option value="last_name_desc">Last name ↓</option>
-          </select>
-        </form>
-    </section>
+      <table id="list">
+        
+        <thead>
+        <div>
+          <p>Sort by:</p>
+          <tr id="sorting">
+            <button data-action="sort" data-sort-direction="asc" data-sort="firstName">First name</button>
+            <button data-action="sort" data-sort-direction="asc" data-sort="lastName">Last name</button>
+          </tr>
 
-
-    <div id="list">
+        </div>
       
+        
+        
+        </thead>
       
     
-    </div>
+      
+      
+        <tbody>
+          
+          <!-- animal template will be copied and inserted here -->
+        
+        </tbody>
+
+      
+      </table>
+
+
+ 
+     
+
+
+      
     <template id="student">
       <div id="student_card">
+      
       <p id="first_name"></p>
       <p id="middle_name"></p>
       <p id="last_name"></p>
       <p id="nickname"></p>
       <p id="gender"></p>
       <p id="house"></p>
+      <p id="expelled"></p>
+      <p id="prefect"></p>
       <img id="image" src="">
+      <button class="expel">Expel</button>
+      <button class="prefects">Make a prefect</button>
+      <button id="details">See more details</button>
+      
       
     </div>
     </template>
