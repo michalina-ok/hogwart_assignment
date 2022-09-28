@@ -5,112 +5,127 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  <!--<link rel="stylesheet" href="flashlight.css">-->
-    <link rel="stylesheet" href="style.css" /> 
+    <!--<link rel="stylesheet" href="flashlight.css"> -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
-   
+    <div id="flash-effect"></div>
     <header>
       <h1>Hacked Hogwarts assignment</h1>
       <h2>class of 1991</h2>
-       
 
-        <figure>
-          
-          <blockquote>
-            Happiness can be found, even in the darkest of times, if one only
-            remembers to turn on the light.
-          </blockquote>
-          <figcaption><cite>Dumbledore</cite></figcaption>
-        </figure>
-        <section id="data">
-          <p id="students_total"></p>
-          <p id="students_non_expelled"></p>
-          <p id="students_expelled"></p>
-          <p id="currently_displayed"></p>
-          
-    
-        </section>
-        
-      </header>
+      <!-- <figure>
+        <blockquote>
+          Happiness can be found, even in the darkest of times, if one only
+          remembers to turn on the light.
+        </blockquote>
+        <figcaption><cite>Dumbledore</cite></figcaption>
+      </figure> -->
+      <section id="data">
+        <p id="students_total"></p>
+        <p id="students_non_expelled"></p>
+        <p id="students_expelled"></p>
+        <p id="currently_displayed"></p>
+      </section>
+    </header>
 
-    
-     <div> <label for="search">Search the site:</label>
-<input type="search" id="search" name="q" value="">
+    <div>
+      <label for="search">Search the site:</label>
+      <input type="search" id="search" name="q" value="" />
 
-<button id="search_button">Search</button>
-</div>
-<div>
+      <button id="search_button">Search</button>
+    </div>
+    <div>
       <p>
         Filter:
-        <button class="filter" data-action="filter" data-filter="gryffindor">Gryffindor</button>
-        <button class="filter" data-action="filter" data-filter="ravenclaw">Ravenclaw</button>
-        <button class="filter" data-action="filter" data-filter="hufflepuff">Hufflepuff</button>
-        <button class="filter" data-action="filter" data-filter="slytherin">Slytherin</button>
-        <button class="filter" data-action="filter" data-filter="expelled">Expelled students</button>
-        <button class="filter" data-action="filter" data-filter="non_expelled">Non expelled students</button>
+        <button class="filter" data-action="filter" data-filter="gryffindor">
+          Gryffindor
+        </button>
+        <button class="filter" data-action="filter" data-filter="ravenclaw">
+          Ravenclaw
+        </button>
+        <button class="filter" data-action="filter" data-filter="hufflepuff">
+          Hufflepuff
+        </button>
+        <button class="filter" data-action="filter" data-filter="slytherin">
+          Slytherin
+        </button>
+        <button class="filter" data-action="filter" data-filter="expelled">
+          Expelled students
+        </button>
+        <button class="filter" data-action="filter" data-filter="non_expelled">
+          Non expelled students
+        </button>
         <button class="filter" data-action="filter" data-filter="*">all</button>
       </p>
     </div>
-  
-     
-      <table id="list">
-        
-        <thead>
+
+    <table id="list">
+      <thead>
         <div>
           <p>Sort by:</p>
           <tr id="sorting">
-            <button data-action="sort" data-sort-direction="asc" data-sort="firstName">First name</button>
-            <button data-action="sort" data-sort-direction="asc" data-sort="lastName">Last name</button>
+            <button
+              data-action="sort"
+              data-sort-direction="asc"
+              data-sort="firstName"
+            >
+              First name
+            </button>
+            <button
+              data-action="sort"
+              data-sort-direction="asc"
+              data-sort="lastName"
+            >
+              Last name
+            </button>
           </tr>
-
         </div>
-      
+      </thead>
+
+      <tbody>
+        <!-- animal template will be copied and inserted here -->
+      </tbody>
+    </table>
+
+    <div class="popup_wrapper">
+      <div class="popup">
+        <div id="popup_header">
+        <h1></h1>
         
-        
-        </thead>
-      
-    
-      
-      
-        <tbody>
-          
-          <!-- animal template will be copied and inserted here -->
-        
-        </tbody>
+        <img id="image_popup" src="" />
+      </div>
+      <p id="blood_popup"></p>
+      <p id="prefect_popup"></p>
+      <p id="expelled_popup"></p>
+      <p id="inquisitorial_popup"></p>
+      </div>
+    </div>
 
-      
-      </table>
-
-
- 
-     
-
-
-      
     <template id="student">
       <div id="student_card">
-      
-      <p id="first_name"></p>
-      <p id="middle_name"></p>
-      <p id="last_name"></p>
-      <p id="nickname"></p>
-      <p id="gender"></p>
-      <p id="house"></p>
-      <p id="expelled"></p>
-      <p id="prefect"></p>
-      <img id="image" src="">
-      <button class="expel">Expel</button>
-      <button class="prefects">Make a prefect</button>
-      <button class="inqusitorial_squad">Add to the inquisitorial squad</button>
-      <button id="details">See more details</button>
-      
-      
-    </div>
+        <p id="first_name"></p>
+        <p id="middle_name"></p>
+        <p id="last_name"></p>
+        <p id="nickname"></p>
+        <p id="gender"></p>
+        <p id="house"></p>
+        <p id="expelled"></p>
+        <p id="prefect"></p>
+        <p id="blood_status"></p>
+        <p id="inquisitorial_squad_status"></p>
+        <img id="image" src="" />
+        <button class="expel">Expel</button>
+        <button class="prefects">Make a prefect</button>
+        <button class="inquisitorial_squad">
+          Add to the inquisitorial squad
+        </button>
+        <button class="more_details">See more details</button>
+      </div>
     </template>
 
+
     <script src="script.js"></script>
-    <!--<script src="flashlight.js"></script>-->
+   <!-- <script src="flashlight.js"></script> -->
   </body>
 </html>
