@@ -426,7 +426,7 @@ function displayStudent(student) {
   clone.querySelector(
     "#nickname"
   ).textContent = `Nickname: ${student.nickName}`;
-  clone.querySelector("#image").src = "./images/" + student.image;
+  clone.querySelector("#image").src = "./images/" + student.image.toLowerCase();
   clone.querySelector("#house").textContent = `Belongs to ${student.house}`;
   clone.querySelector(
     "#gender"
@@ -451,7 +451,7 @@ function displayStudent(student) {
     document.querySelector(
       ".popup h1"
     ).textContent = `${student.firstName} ${student.nickName} ${student.middleName} ${student.lastName}`;
-    document.querySelector("#image_popup").src = "./images/" + student.image;
+    document.querySelector("#image_popup").src = "./images/" + student.image.toLowerCase();
     document.querySelector(
       "#blood_popup"
     ).textContent = `Is of ${student.bloodStatus} blood`;
