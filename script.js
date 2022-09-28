@@ -426,7 +426,7 @@ function displayStudent(student) {
   clone.querySelector(
     "#nickname"
   ).textContent = `Nickname: ${student.nickName}`;
-  clone.querySelector("#image").src = "images/" + student.image;
+  clone.querySelector("#image").src = "./images/" + student.image;
   clone.querySelector("#house").textContent = `Belongs to ${student.house}`;
   clone.querySelector(
     "#gender"
