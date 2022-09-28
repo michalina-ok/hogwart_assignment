@@ -80,22 +80,6 @@ function registerButtons() {
     .forEach((button) => button.addEventListener("click", selectSort));
 }
 
-function findDuplicateNames() {
-  lastNameArray = allStudents.map((a) => a.lastName);
-  duplicateNameArray = lastNameArray.filter(
-    (lastName, i, arr) =>
-      arr.indexOf(lastName) === i && arr.lastIndexOf(lastName) !== i
-  );
-
-  if (duplicateNameArray.includes(student.lastName)) {
-    student.image =
-      student.lastName.toLowerCase() +
-      "_" +
-      student.firstName.toLowerCase() +
-      ".png";
-  }
-  return duplicateNameArray;
-}
 
 function loadJSON() {
   fetch("https://petlatkea.dk/2021/hogwarts/students.json")
@@ -237,6 +221,7 @@ function prepareObject(jsonObject) {
 
   //IMAGES
 
+
   if (student.lastName.includes("-")) {
     let secondPart = student.lastName.slice(
       student.lastName.indexOf("-") + 1,
@@ -248,6 +233,13 @@ function prepareObject(jsonObject) {
       student.firstName[0].toLowerCase() +
       ".png";
   }
+
+  else if (student.lastName.includes("Patil")) {
+    student.image =
+        student.lastName.toLowerCase() +  "_" + student.firstName.toLowerCase() +  ".png";
+       
+  }
+
   //else if() {
 
   // }
