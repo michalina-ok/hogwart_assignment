@@ -245,7 +245,7 @@ function prepareObject(jsonObject) {
   // }
   else {
     student.image =
-      student.lastName + "_" + student.firstName[0].toLowerCase() + ".png";
+      student.lastName.toLowerCase() + "_" + student.firstName[0].toLowerCase() + ".png";
   }
 
   //BLOOD STATUS
