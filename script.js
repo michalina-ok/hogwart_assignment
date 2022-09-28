@@ -451,7 +451,7 @@ function displayStudent(student) {
     document.querySelector(
       ".popup h1"
     ).textContent = `${student.firstName} ${student.nickName} ${student.middleName} ${student.lastName}`;
-    document.querySelector("#image_popup").src = "images/" + student.image;
+    document.querySelector("#image_popup").src = "./images/" + student.image;
     document.querySelector(
       "#blood_popup"
     ).textContent = `Is of ${student.bloodStatus} blood`;
